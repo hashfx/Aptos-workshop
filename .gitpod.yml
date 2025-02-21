@@ -1,9 +1,3 @@
 tasks:
   - before: |
-      if ! command -v aptos &> /dev/null; then
-        echo "Aptos CLI not found. Installing..."
-        curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
-      else
-        echo "Aptos CLI is already installed."
-      fi
-      aptos --version  # Verify installation
+      curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
